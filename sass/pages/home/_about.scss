@@ -1,0 +1,109 @@
+.about {
+    padding-top: 17.2rem;
+
+    &__first {
+        display: flex;
+        gap: 10rem;
+    }
+
+    &__features {
+        display: flex;
+        margin-top: 4rem;
+    }
+
+    &__right {
+        display: flex;
+        gap: 6.7rem;
+        width: auto;
+        height: 59.5rem;
+        transition: all 0.5s;
+
+        &--img1 {
+            align-self: end;
+        }
+
+        &--img2 {
+            align-self: start;
+        }
+    }
+
+    /// about page
+
+    &__history {
+        margin-top: 16rem;
+        background-color: $color-primary-light;
+    }
+
+    &__background {
+        display: flex;
+        align-items: center;
+        height: 50rem;
+        background: linear-gradient(97.28deg, rgba(25, 22, 27, 0.92) 34.6%, rgba(25, 22, 27, 0) 83.17%),
+            url("/assets/img/BG_about.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &--accent {
+            color: $color-accent;
+        }
+    }
+
+    &__background-content {
+        padding-left: 8rem;
+        width: 50rem;
+    }
+
+    &__history-block {
+        padding: 8rem;
+    }
+
+    &__years {
+        padding-top: 4.3rem;
+        display: flex;
+        gap: 4.3rem;
+    }
+
+    &__year {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &__year-year {
+        font-weight: 600;
+        font-size: 3.2rem;
+        line-height: 4.4rem;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -4.7rem;
+            border: 3px solid $color-accent;
+            width: 18%;
+        }
+    }
+
+    &__priorities {
+        margin-top: 16rem;
+        display: flex;
+        gap: 11.6rem;
+
+        h2 {
+            flex-basis: 50%;
+        }
+    }
+
+    &__priorities-article {
+        flex-basis: 50%;
+        p {
+            padding-top: 2.4rem;
+        }
+    }
+
+    .line {
+        padding-top: 7rem;
+        width: 100%;
+        border-bottom: dashed 2px rgba($color-white, 0.2);
+    }
+}

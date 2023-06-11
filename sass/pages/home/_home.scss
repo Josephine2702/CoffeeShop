@@ -1,0 +1,35 @@
+.home {
+    padding-top: 10rem;
+
+    &__block {
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+    }
+
+    &__left {
+        width: 62.4rem;
+
+        h1 {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    &__btn {
+        margin-bottom: 4rem;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+    }
+
+    &__right {
+        width: 63.3rem;
+
+        img {
+            width: 100%;
+        }
+    }
+}

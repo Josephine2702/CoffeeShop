@@ -1,0 +1,49 @@
+.home-serving {
+    padding-top: 16rem;
+
+    &__header {
+        @include section-header;
+        gap: 5.8rem;
+        margin-bottom: 6.4rem;
+
+        h2 {
+            flex-basis: 50%;
+        }
+
+        p {
+            flex-basis: 50%;
+        }
+    }
+
+    &__grid {
+        padding: 6.4rem 6.4rem;
+        display: grid;
+        background-color: $color-primary-dark;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        gap: 12.7rem;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: "";
+            border: solid 1px rgba($color-white, 0.1);
+            position: absolute;
+            top: 50%;
+            left: 6.1%;
+            width: 70rem;
+            transform: rotate(90deg);
+        }
+
+        &::before {
+            left: 39%;
+        }
+
+        h3 {
+            margin-bottom: 1.3rem;
+        }
+
+        img {
+            margin-bottom: 2.4rem;
+        }
+    }
+}

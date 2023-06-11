@@ -1,0 +1,69 @@
+.home-quote {
+    margin-top: 16.5rem;
+    background-color: $color-primary-light;
+
+    &__block {
+        display: flex;
+    }
+
+    &__quote {
+        padding: 8rem 7.8rem 8.4rem 9rem;
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .quote {
+            font-weight: 700;
+            font-size: 7.2rem;
+            line-height: 4.3rem;
+            font-style: italic;
+        }
+    }
+
+    &__author {
+        padding-top: 6.8rem;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 1px rgba($color-white, 0.2);
+        padding-bottom: 2.2rem;
+    }
+
+    .border {
+        border-bottom: 2px solid $color-white;
+        width: 5rem;
+        align-self: flex-end;
+    }
+
+    &__video {
+        flex-basis: 60%;
+    }
+
+    &__img-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    &__play {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s;
+        filter: brightness(90%);
+
+        &:hover,
+        &:active {
+            cursor: pointer;
+            filter: brightness(120%) drop-shadow(0 0.5rem 3rem $color-accent);
+        }
+    }
+}

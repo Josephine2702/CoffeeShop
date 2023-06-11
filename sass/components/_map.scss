@@ -1,0 +1,19 @@
+.map {
+    padding-top: 16rem;
+
+    &__block {
+        background-color: $color-primary-light;
+        display: flex;
+    }
+
+    &__detail {
+        padding: 8rem 3.5rem 8rem 6.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+
+        a {
+            display: block;
+        }
+    }
+}

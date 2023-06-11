@@ -1,0 +1,61 @@
+.footer {
+    padding-top: 16rem;
+    display: flex;
+    flex-direction: column;
+
+    &__logo {
+        height: 2.4rem;
+        margin-bottom: 4.4rem;
+    }
+
+    &__nav {
+        justify-content: center;
+        margin-bottom: 3.2rem;
+    }
+
+    &__border {
+        border: solid 1px rgba($color-white, 0.2);
+        width: 100vw;
+    }
+
+    &__bottom {
+        display: flex;
+        padding: 2.4rem 0;
+        justify-content: space-between;
+    }
+
+    &__media {
+        display: flex;
+        gap: 2.4rem;
+        padding-right: 18rem;
+    }
+    &__media-link {
+        &:visited,
+        &:link {
+            transition: all 0.5s;
+        }
+
+        &:hover,
+        &:active {
+            @include hover-link;
+        }
+    }
+
+    &__contact {
+        color: $color-white;
+
+        span {
+            color: $color-accent;
+        }
+
+        &:visited,
+        &:link {
+            transition: all 0.5s;
+        }
+
+        &:hover,
+        &:active {
+            @include hover-link;
+        }
+    }
+}

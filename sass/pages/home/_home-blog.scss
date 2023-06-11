@@ -1,0 +1,31 @@
+.home-blog {
+    padding-top: 16rem;
+
+    &__block {
+        display: flex;
+        gap: 3.2rem;
+        padding-top: 6.4rem;
+    }
+
+    &__item {
+        background-color: $color-primary-light;
+        max-width: 40rem;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__item-content {
+        padding: 3.2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__date {
+        margin-bottom: 0.8rem;
+    }
+}
