@@ -31,6 +31,22 @@
     cursor: pointer;
 }
 
+@mixin read-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16.4rem;
+    color: $color-white;
+    cursor: pointer;
+}
+
+@mixin hover-read-link {
+    color: $color-white;
+    transform: scale(1.05);
+     transition: all 0.3s;
+    filter: drop-shadow(0 0.5rem 1rem $color-accent);
+}
+
 @mixin section-header {
     display: flex;
     justify-content: space-between;
