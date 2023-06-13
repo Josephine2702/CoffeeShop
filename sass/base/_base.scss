@@ -25,6 +25,10 @@ body {
     margin: 0 auto;
 }
 
+.image-container{
+    @include image-container;
+}
+
 ::selection {
     background-color: $color-accent;
     color: $color-text-dark;
