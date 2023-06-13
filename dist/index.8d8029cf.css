@@ -39,6 +39,10 @@ body {
   opacity: 1;
 }
 
+.accent {
+  color: #ffb577;
+}
+
 @font-face {
   font-family: Playfair Display;
   src: url("PlayfairDisplay-Bold.092b47f0.ttf") format("truetype");
@@ -460,10 +464,8 @@ a {
 }
 
 .about__right {
-  width: auto;
   height: 59.5rem;
   gap: 6.7rem;
-  transition: all .5s;
   display: flex;
 }
 
@@ -700,6 +702,33 @@ a {
 
 .home-blog__date {
   margin-bottom: .8rem;
+}
+
+.story {
+  padding-top: 11.2rem;
+}
+
+.story h2, .story h3 {
+  padding-bottom: 2.4rem;
+}
+
+.story__block {
+  gap: 11.3rem;
+  display: flex;
+}
+
+.story__block-img {
+  height: 54rem;
+  gap: 6.4rem;
+  display: flex;
+}
+
+.story--img1 {
+  align-self: end;
+}
+
+.story--img2 {
+  align-self: start;
 }
 
 /*# sourceMappingURL=index.8d8029cf.css.map */
