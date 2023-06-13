@@ -29,6 +29,13 @@ a {
     line-height: 4.8rem;
 }
 
+.heading-article {
+    @include heading;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
 .heading-small {
     @include heading-small;
 }
@@ -55,6 +62,22 @@ a {
 
 .text {
     @include text;
+}
+
+.link-article{
+   @include read-link;
+   transition: all 0.2s;
+
+   &:hover{
+     @include hover-read-link;
+   } 
+}
+
+.location {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: $color-text;
+
 }
 
 .home-about__feature-title {
