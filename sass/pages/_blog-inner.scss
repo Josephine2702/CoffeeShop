@@ -1,0 +1,38 @@
+.blog-inner {
+    padding-top: 9.6rem;
+
+    &__autor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+
+        p {
+            color: $color-white;
+            padding-right: 1.2rem;
+        }
+    }
+
+    .border {
+        width: 50%;
+        border: solid 0.1rem rgba($color-text, 0.1);
+        margin: 0 auto;
+        margin-top: 2.4rem;
+    }
+
+    h2{
+        padding-top: 3.2rem;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__image{
+        padding-top: 8rem;
+    }
+
+    &__content{
+        margin: 0 auto;
+        max-width: 84.2rem;
+    }
+}

@@ -898,4 +898,42 @@ a {
   padding: 2.4rem 0;
 }
 
+.blog-inner {
+  padding-top: 9.6rem;
+}
+
+.blog-inner__autor {
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  display: flex;
+}
+
+.blog-inner__autor p {
+  color: #fff;
+  padding-right: 1.2rem;
+}
+
+.blog-inner .border {
+  width: 50%;
+  border: .1rem solid #b8b8b81a;
+  margin: 2.4rem auto 0;
+}
+
+.blog-inner h2 {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 3.2rem;
+}
+
+.blog-inner__image {
+  padding-top: 8rem;
+}
+
+.blog-inner__content {
+  max-width: 84.2rem;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=index.8d8029cf.css.map */
