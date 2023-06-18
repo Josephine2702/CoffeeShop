@@ -1,0 +1,58 @@
+.contact {
+    padding-top: 9.6rem;
+
+    &__block {
+        display: flex;
+        gap: 9rem;
+    }
+
+    &__form{
+       width:66rem;
+    }
+
+    &__input {
+        width: 100%;
+        max-width: 29.7rem;
+        padding: 1.4rem 0;
+        padding-left: 3.2rem;
+        background-color: $color-primary;
+        border: 1px solid rgba($color-text, 0.1);
+        font-family: $font-text;
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        outline: none;
+        color: $color-white;
+
+
+        &::placeholder {
+            color: $color-white;
+        }
+    }
+
+    input:first-child {
+        margin-right: 3.2rem;
+    }
+
+    input {
+        margin-top: 4rem;
+        height: 5.6rem;
+    }
+
+    textarea {
+        margin-top: 2.4rem;
+        max-width: 63rem;
+    }
+
+    &__btn{
+        margin-top: 3rem;
+        background-color: rgba(39, 37, 45, 1);
+        color: $color-white;
+        border: none;
+
+        span{
+            font-size: 1.8rem;
+            padding-left: 1rem;
+            color: $color-accent;
+        }
+    }
+}
