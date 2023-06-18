@@ -1,12 +1,15 @@
 import { menuItems } from "./js/db";
-import { containerMenu, containerCategories, categories, popularMenu} from "./js/DOM";
+import { containerMenu, containerCategories, categories, popularMenu, popupOverlay, videoLink, videoIframe} from "./js/DOM";
 import {displayMenu} from "./js/displayMenu";
 import {filteredByCategory} from "./js/getCategory";
 import {dispayPopular} from "./js/showPopular";
 import {changeStyle} from "./js/UI";
+import {showVideo} from "./js/showVideo";
+import {loadHeaderAndFooter} from "./js/addComponents";
 
-
-document.addEventListener('DOMContentLoaded', () =>  {
+document.addEventListener('DOMContentLoaded', async () =>  {
+    loadHeaderAndFooter('/index/components/header.html', 'header');
+    loadHeaderAndFooter('/index/components/footer.html', 'footer');
    displayMenu.createCard(menuItems, containerMenu)
 });
 
@@ -39,8 +42,22 @@ containerCategories.addEventListener('click', e => {
      e.stopPropagation();
    }
 });
-
 }
+
+videoLink.addEventListener('click', (e) => { 
+e.preventDefault();
+showVideo(videoLink, videoIframe, popupOverlay)
+
+
+});
+if(popupOverlay){ 
+    popupOverlay.addEventListener('click', () => {
+   videoIframe.src = '';
+   popupOverlay.style.display = 'none';
+});
+
+};
+
 
 
 

@@ -580,7 +580,11 @@ var _displayMenu = require("./js/displayMenu");
 var _getCategory = require("./js/getCategory");
 var _showPopular = require("./js/showPopular");
 var _ui = require("./js/UI");
-document.addEventListener("DOMContentLoaded", ()=>{
+var _showVideo = require("./js/showVideo");
+var _addComponents = require("./js/addComponents");
+document.addEventListener("DOMContentLoaded", async ()=>{
+    (0, _addComponents.loadHeaderAndFooter)("/index/components/header.html", "header");
+    (0, _addComponents.loadHeaderAndFooter)("/index/components/footer.html", "footer");
     (0, _displayMenu.displayMenu).createCard((0, _db.menuItems), (0, _dom.containerMenu));
 });
 if (0, _dom.popularMenu) document.addEventListener("DOMContentLoaded", ()=>{
@@ -601,8 +605,16 @@ if (0, _dom.containerCategories) (0, _dom.containerCategories).addEventListener(
         e.stopPropagation();
     }
 });
+(0, _dom.videoLink).addEventListener("click", (e)=>{
+    e.preventDefault();
+    (0, _showVideo.showVideo)((0, _dom.videoLink), (0, _dom.videoIframe), (0, _dom.popupOverlay));
+});
+if (0, _dom.popupOverlay) (0, _dom.popupOverlay).addEventListener("click", ()=>{
+    (0, _dom.videoIframe).src = "";
+    (0, _dom.popupOverlay).style.display = "none";
+});
 
-},{"./js/db":"8KMOv","./js/DOM":"EyUfz","./js/displayMenu":"56QUq","./js/getCategory":"ckc80","./js/showPopular":"6XmZc","./js/UI":"8BZ1U"}],"8KMOv":[function(require,module,exports) {
+},{"./js/db":"8KMOv","./js/DOM":"EyUfz","./js/displayMenu":"56QUq","./js/getCategory":"ckc80","./js/showPopular":"6XmZc","./js/UI":"8BZ1U","./js/showVideo":"3RVsW","./js/addComponents":"aIHmm"}],"8KMOv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "menuItems", ()=>menuItems);
@@ -794,7 +806,10 @@ parcelHelpers.export(exports, "containerMenu", ()=>containerMenu);
 parcelHelpers.export(exports, "popularMenu", ()=>popularMenu);
 parcelHelpers.export(exports, "containerCategories", ()=>containerCategories);
 parcelHelpers.export(exports, "categories", ()=>categories);
-const headerContainer = document.getElementById("header-container"), footerContainer = document.getElementById("footer-container"), containerMenu = document.querySelector(".menu__grid"), popularMenu = document.getElementById("menu__popular"), containerCategories = document.querySelector(".menu__categories"), categories = document.querySelectorAll(".menu__category");
+parcelHelpers.export(exports, "videoLink", ()=>videoLink);
+parcelHelpers.export(exports, "popupOverlay", ()=>popupOverlay);
+parcelHelpers.export(exports, "videoIframe", ()=>videoIframe);
+const headerContainer = document.getElementById("header-container"), footerContainer = document.getElementById("footer-container"), containerMenu = document.querySelector(".menu__grid"), popularMenu = document.getElementById("menu__popular"), containerCategories = document.querySelector(".menu__categories"), categories = document.querySelectorAll(".menu__category"), videoLink = document.querySelector(".video-link"), popupOverlay = document.querySelector(".popup-overlay"), videoIframe = document.querySelector(".video-iframe");
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"56QUq":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -860,6 +875,33 @@ class UI {
     }
 }
 let changeStyle = new UI();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3RVsW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "showVideo", ()=>showVideo);
+const showVideo = (link, frame, overlay)=>{
+    const videoId = link.getAttribute("data-video-id");
+    const videoUrl = `https://www.youtube.com/embed/${videoId}?rel=0&amp;autoplay=1`;
+    frame.src = videoUrl;
+    overlay.style.display = "block";
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aIHmm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "loadHeaderAndFooter", ()=>loadHeaderAndFooter) //index\components\footer.html
+;
+async function loadHeaderAndFooter(component, container) {
+    // fetch(component)
+    //   .then(response => response.text())
+    //   .then(data => {
+    //     document.getElementById(container).innerHTML = data;
+    //   });
+    const componentResponse = await fetch(component);
+    const containerHtml = await componentResponse.text();
+    document.getElementById(container).innerHTML = containerHtml;
+}
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["gAoaA","6rimH"], "6rimH", "parcelRequiref458")
 
