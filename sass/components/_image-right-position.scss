@@ -1,0 +1,16 @@
+.image-right__position{
+      
+        display: flex;
+        gap: 6.7rem;
+        height: 59.5rem;
+      
+
+        &--img1 {
+            align-self: end;
+        }
+
+        &--img2 {
+            align-self: start;
+        }
+    
+}

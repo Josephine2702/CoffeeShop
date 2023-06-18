@@ -32,7 +32,28 @@
     }
 
     &__content{
+        padding-top: 8rem;
         margin: 0 auto;
         max-width: 84.2rem;
+        
+        h3{
+            padding-bottom: 2.4rem;
+        }
+
+        p{
+            padding-bottom: 1.6rem;
+        }
+
+        p:last-child {
+            padding-bottom: 4rem;
+        }
+
+        h5 {
+            padding-bottom: 2.4rem;
+        }
+
+        li{
+            list-style: none;
+        }
     }
 }
