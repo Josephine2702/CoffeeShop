@@ -8,8 +8,8 @@ import {showVideo} from "./js/showVideo";
 import {loadHeaderAndFooter} from "./js/addComponents";
 
 document.addEventListener('DOMContentLoaded', async () =>  {
-    loadHeaderAndFooter('/index/components/header.html', 'header');
-    loadHeaderAndFooter('/index/components/footer.html', 'footer');
+    loadHeaderAndFooter('./header.html', 'header');
+    loadHeaderAndFooter('./footer.html', 'footer');
    displayMenu.createCard(menuItems, containerMenu)
 });
 

@@ -583,8 +583,8 @@ var _ui = require("./js/UI");
 var _showVideo = require("./js/showVideo");
 var _addComponents = require("./js/addComponents");
 document.addEventListener("DOMContentLoaded", async ()=>{
-    (0, _addComponents.loadHeaderAndFooter)("/index/components/header.html", "header");
-    (0, _addComponents.loadHeaderAndFooter)("/index/components/footer.html", "footer");
+    (0, _addComponents.loadHeaderAndFooter)("./header.html", "header");
+    (0, _addComponents.loadHeaderAndFooter)("./footer.html", "footer");
     (0, _displayMenu.displayMenu).createCard((0, _db.menuItems), (0, _dom.containerMenu));
 });
 if (0, _dom.popularMenu) document.addEventListener("DOMContentLoaded", ()=>{
