@@ -1,0 +1,28 @@
+doctype html 
+html(lang='en')
+    include ../components/head.pug
+    //- include ../config.pug
+    body 
+        include ../components/header.pug
+        section.contact.container 
+            .contact__block
+                .contact__left 
+                    h2.heading-secondary Have a Question?
+                    h2.heading-secondary.margin-bottom-middle Get in Touch with us👋
+                    p.text Fill up the Form and ou team will get back to within 24 hours 
+                    form.contact__form
+                        .contact__info
+                            input.contact__name.contact__input(type="text" placeholder="Name")
+                            input.contact__email.contact__input(type="email" placeholder="Email" name="email" required)
+                        textarea.contact__input(type="text" placeholder="Message" name="message" cols="30" rows="5") 
+                        button.contact__btn.button Send Message
+                            span &rarr;
+                .image-right__position
+                    img.image-right__position--img1(data-aos="fade-up" data-aos-duration="2000" src="/assets/img/ContactImage1.jpg" alt="coffee-shop")
+                    img.image-right__position--img2(data-aos="fade-up" data-aos-duration="2000" src="/assets/img/ContactImage2.jpg" alt="coffee-shop")
+        include ../components/map.pug
+        include ../components/footer.pug
+        script(type='module', src='/script.js')
+        script(src='https://unpkg.com/aos@next/dist/aos.js')
+        script.
+            AOS.init();

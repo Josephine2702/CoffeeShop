@@ -4,20 +4,21 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist",
-    "import": "html-import-partials index/components/*html -o dist"
+    "start": "parcel index.pug",
+    "build": "parcel build index.pug --dist-dir ./dist",
+    "watch": "parcel watch index.pug --dist-dir ./dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-pug": "^2.9.2",
     "@parcel/transformer-sass": "^2.9.2",
     "parcel": "^2.9.2",
+    "pug": "^3.0.2",
     "sass": "^1.62.1"
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "core-js": "^3.30.2",
-    "pug": "^3.0.2"
+    "core-js": "^3.30.2"
   }
 }

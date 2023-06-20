@@ -1,7 +1,8 @@
 .about {
-    padding-top: 17.2rem;
+    
 
     &__first {
+        padding-top: 9.6rem;
         display: flex;
         gap: 10rem;
     }
@@ -9,22 +10,13 @@
     &__features {
         display: flex;
         margin-top: 4rem;
+        gap: 3.2rem;
+
+        img{
+            padding-right: 0.7rem;
+        }
     }
 
-    // &__right {
-    //     display: flex;
-    //     gap: 6.7rem;
-    //     height: 59.5rem;
-      
-
-    //     &--img1 {
-    //         align-self: end;
-    //     }
-
-    //     &--img2 {
-    //         align-self: start;
-    //     }
-    // }
 
     /// about page
 
@@ -84,7 +76,7 @@
     }
 
     &__priorities {
-        margin-top: 16rem;
+        padding-top: 16rem;
         display: flex;
         gap: 11.6rem;
 

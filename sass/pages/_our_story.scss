@@ -1,0 +1,27 @@
+.story {
+    padding-top: 11.2rem;
+
+    h2,h3{
+        padding-bottom: 2.4rem;
+    }
+
+    &__block {
+        display: flex;
+        gap: 11.3rem;
+    }
+
+    &__block-img{
+        display: flex;
+        gap: 6.4rem;
+        height: 54rem;
+      
+    }
+        &--img1 {
+            align-self: end;
+        }
+
+        &--img2 {
+            align-self: start;
+        
+    }
+}

@@ -1,0 +1,71 @@
+doctype html 
+html(lang='en')
+    include ../components/head.pug
+    //- include ../config.pug
+    body 
+        include ../components/header.pug
+        selection.about.container 
+            .about__first 
+                .about__left 
+                    .title KNOW MORE ABOUT US 
+                    h2.heading-secondary.margin-bottom-middle We source sustainable & line caught Foods 
+                    p.text Edit this text to make it your own. To edit, simply click directly on the text to start adding your own words. You can move the text by dragging and dropping the text anywhere on the page.
+                    .about__features.margin-bottom-middle 
+                        .about__feature.about__feature--1 
+                            img(src='/assets/icons/feature.svg' alt='feature') 
+                            span.about__feature-title 10+ People 
+                            p.text.margin-bottom-small We are Small Team 
+                            p.text Through True Rich Attended does no end it his mother since favourable.
+                        .about__feature.about__feature--2 
+                            img(src='/assets/icons/feature.svg' alt='feature') 
+                            span.about__feature-title 2014 
+                            p.text.margin-bottom-small We are From 
+                            p.text Through True Rich Attended does no end it his mother since favourable.
+                        .about__feature.about__feature--3 
+                            img(src='/assets/icons/feature.svg' alt='feature') 
+                            span.about__feature-title 200k 
+                            p.text.margin-bottom-small We Served 
+                            p.text Through True Rich Attended does no end it his mother since favourable.
+                .image-right__position(data-aos='fade-up' data-aos-duration='2000') 
+                    img.image-right__position--img1(src='/assets/img/Know_more1.jpg' alt='coffee-shop') 
+                .image-right__position(data-aos='fade-down' data-aos-duration='2000')
+                    img.image-right__position--img2(src='/assets/img/Know_more2.jpg' alt='coffee-shop')
+            .about__history 
+                .about__background 
+                   .about__background-content(data-aos='fade-left', data-aos-offset='300', data-aos-anchor-placement='center-left')
+                        h2.heading-secondary.margin-bottom-middle 
+                            | One of the best
+                            | Cafes in 
+                            span.accent New York 
+                        p.text Edit this text to make it your own. To edit, simply click directly on the text to start adding your own words. You can move the text by dragging and dropping the text anywhere on the page.
+                .about__history-block 
+                    h3.heading-tertiary Our History 
+                    .line 
+                    .about__years 
+                        .about__year(data-aos='fade-right') 
+                            p.about__year-year 1998
+                            h4.heading-small Milestone One 
+                            p.text Through True Rich Attended does no end it his mother since favourable.
+                        .about__year(data-aos='fade-right' data-aos-delay='200')
+                            p.about__year-year 2005
+                            h4.heading-small Milestone Two 
+                            p.text Through True Rich Attended does no end it his mother since favourable.
+                        .about__year(data-aos='fade-right' data-aos-delay='400')
+                            p.about__year-year 2012
+                            h4.heading-small Milestone Three 
+                            p.text Through True Rich Attended does no end it his mother since favourable 
+                        .about__year(data-aos='fade-right' data-aos-delay='600')
+                            p.about__year-year 2021
+                            h4.heading-small Milestone Four 
+                            p.text Through True Rich Attended does no end it his mother since favourable 
+            .about__priorities 
+                h2.heading-secondary Things our company stands for
+                .about__priorities-article 
+                    h4.heading-tertiary Edit this text to make it your own. To edit, simply click directly
+                    p.text UX Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about how to get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.
+            include ../components/map.pug
+        include ../components/footer.pug
+        script(type='module', src='/script.js')
+        script(src='https://unpkg.com/aos@next/dist/aos.js')
+        script.
+            AOS.init();
