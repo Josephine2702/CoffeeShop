@@ -117,58 +117,15 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-  return bundleURL;
-}
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-  return '/';
-}
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-function updateLink(link) {
-  var newLink = link.cloneNode();
-  newLink.onload = function () {
-    link.remove();
-  };
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-var cssTimeout = null;
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-    cssTimeout = null;
-  }, 50);
-}
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"node_modules/leaflet.tilelayer.colorfilter/src/leaflet-tilelayer-colorfilter.min.js":[function(require,module,exports) {
+/*
+  Leaflet.TileLayer.ColorFilter
+  (c) 2018, Claudio T. Kawakani
+  A simple and lightweight Leaflet plugin to apply CSS filters on map tiles.
+  https://github.com/xtk93x/Leaflet.TileLayer.ColorFilter
+*/
+"use strict";L.TileLayer.ColorFilter=L.TileLayer.extend({intialize:function(t,i){L.TileLayer.prototype.initialize.call(this,t,i)},colorFilter:function(){var r=["blur:px","brightness:%","bright:brightness:%","bri:brightness:%","contrast:%","con:contrast:%","grayscale:%","gray:grayscale:%","hue-rotate:deg","hue:hue-rotate:deg","hue-rotation:hue-rotate:deg","invert:%","inv:invert:%","opacity:%","op:opacity:%","saturate:%","saturation:saturate:%","sat:saturate:%","sepia:%","sep:sepia:%"];return(this.options.filter?this.options.filter:[]).map(function(t){var i=t.toLowerCase().split(":");if(2===i.length){var e=r.find(function(t){return t.split(":")[0]===i[0]});if(e)return e=e.split(":"),i[1]+=/^\d+$/.test(i[1])?e[e.length-1]:"","".concat(e[e.length-2],"(").concat(i[1],")")}return""}).join(" ")},_initContainer:function(){L.TileLayer.prototype._initContainer.call(this);this._container.style.filter=this.colorFilter()},updateFilter:function(t){this.options.filter=t,this._container&&(this._container.style.filter=this.colorFilter())}}),L.tileLayer.colorFilter=function(t,i){return new L.TileLayer.ColorFilter(t,i)};
+},{}],"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -193,7 +150,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52849" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53792" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
@@ -337,5 +294,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/pages/menu.js.map
+},{}]},{},["../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","node_modules/leaflet.tilelayer.colorfilter/src/leaflet-tilelayer-colorfilter.min.js"], null)
+//# sourceMappingURL=/leaflet-tilelayer-colorfilter.min.4625757a.js.map

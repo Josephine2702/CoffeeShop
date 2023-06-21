@@ -1,7 +1,6 @@
 doctype html 
 html(lang='en')
     include ../components/head.pug
-    //- include ../config.pug
     body 
         include ../components/header.pug
         section.blog-inner.container 
@@ -30,9 +29,8 @@ html(lang='en')
                 p.text And you are all geared up to make your UX copies more fun and exciting 😎
                 h3.heading-tertiary Your own words. You can move the text by dragging and dropping the text anywhere on the page.
                 p.text Writing UX copies can be a little frustrating and confusing, and sometimes we are unsure about howto get the right word. To crack the code for the UX copies, we at Zeta Design wanted to build a Figma plugin for the larger design community. The plugin is called the Ghost UXWriter and has a set of UX copies cataloged and categorized with a voice and tone variation ranging from plain, casual to playful. The intention to build this Figma plugin originated from our Medium blog post, ‘Designing voice and tone for error messages.
-        include ../components/map.pug
         include ../components/footer.pug
-        script(type='module', src='/script.js')
+        script(type='module', src='/script.js' defer)
         script(src='https://unpkg.com/aos@next/dist/aos.js')
         script.
             AOS.init();

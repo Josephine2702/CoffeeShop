@@ -168,7 +168,13 @@ function reloadCSS() {
   }, 50);
 }
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/leaflet/dist/leaflet.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"./images\\layers.png":[["layers.69e4b0dc.png","node_modules/leaflet/dist/images/layers.png"],"node_modules/leaflet/dist/images/layers.png"],"./images\\layers-2x.png":[["layers-2x.c9958c4f.png","node_modules/leaflet/dist/images/layers-2x.png"],"node_modules/leaflet/dist/images/layers-2x.png"],"./images\\marker-icon.png":[["marker-icon.3caa7cec.png","node_modules/leaflet/dist/images/marker-icon.png"],"node_modules/leaflet/dist/images/marker-icon.png"],"_css_loader":"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -193,7 +199,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52849" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53792" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
@@ -338,4 +344,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../../../nvm/v16.19.1/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/pages/menu.js.map
+//# sourceMappingURL=/leaflet.31c3523e.js.map

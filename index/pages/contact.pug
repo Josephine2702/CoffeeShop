@@ -1,7 +1,6 @@
 doctype html 
 html(lang='en')
     include ../components/head.pug
-    //- include ../config.pug
     body 
         include ../components/header.pug
         section.contact.container 
@@ -22,7 +21,4 @@ html(lang='en')
                     img.image-right__position--img2(data-aos="fade-up" data-aos-duration="2000" src="/assets/img/ContactImage2.jpg" alt="coffee-shop")
         include ../components/map.pug
         include ../components/footer.pug
-        script(type='module', src='/script.js')
-        script(src='https://unpkg.com/aos@next/dist/aos.js')
-        script.
-            AOS.init();
+        include ../components/scripts.pug

@@ -19,6 +19,8 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "core-js": "^3.30.2"
+    "core-js": "^3.30.2",
+    "leaflet": "^1.9.4",
+    "leaflet.tilelayer.colorfilter": "^1.2.5"
   }
 }

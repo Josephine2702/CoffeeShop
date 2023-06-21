@@ -7,4 +7,6 @@ export const headerContainer = document.getElementById('header-container'),
             categories = document.querySelectorAll('.menu__category'),
             videoLink = document.querySelector('.video-link'),
             popupOverlay = document.querySelector('.popup-overlay'),
-            videoIframe = document.querySelector('.video-iframe');
+            videoIframe = document.querySelector('.video-iframe'),
+            navList = document.querySelector('.nav__list'),
+            mapContainer = document.getElementById('map');

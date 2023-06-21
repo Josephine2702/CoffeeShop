@@ -1,4 +1,4 @@
-export const menuItems = [
+export const menuItems =[
     {
         "id": 1,
         "category": "coffee",
@@ -120,7 +120,7 @@ export const menuItems = [
         "id": 17,
         "category": "cake",
         "img": "/menu17.645170b0.jpg",
-        "name": "Kiev cake",
+        "name": "Coffee cake",
         "price": 6.97
     },
     {
@@ -144,5 +144,5 @@ export const menuItems = [
         "img": "/menu20.235e2f08.jpg",
         "name": "Flat White",
         "price": 8.85
-    },
+    }
 ]

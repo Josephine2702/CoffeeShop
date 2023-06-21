@@ -1,7 +1,6 @@
 doctype html 
 html(lang='en')
     include ../components/head.pug
-    //- include ../config.pug
     body 
         include ../components/header.pug
         section.menu.container 
@@ -10,16 +9,13 @@ html(lang='en')
                 h2.heading-secondary Discover our menu chart 
                 p.text Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.. Through True Rich Attended does no end it his mother
             .menu__categories 
-                a.menu__category.all.heading-small(href='#' data-category='all' style='opacity: 1;') All 
+                a.menu__category.all.heading-small(href='#' data-category='all' style='opacity: 1') All 
                 a.menu__category.heading-small(href='#' data-category='fastFood') Fast Food 
                 a.menu__category.heading-small(href='#' data-category='coffee') Coffee 
                 a.menu__category.heading-small(href='#' data-category='cocktails') Cocktails 
                 a.menu__category.heading-small(href='#' data-category='cake') Quafe Cake 
                 a.menu__category.heading-small(href='#' data-category='snack') Snacks 
             .menu__grid
-        include ../components/map.pug
+            include ../components/map.pug
         include ../components/footer.pug
-        script(type='module', src='/script.js')
-        script(src='https://unpkg.com/aos@next/dist/aos.js')
-        script.
-            AOS.init();
+        include ../components/scripts.pug
