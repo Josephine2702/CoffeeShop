@@ -1,5 +1,5 @@
 import { menuItems} from "./js/db";
-import { containerMenu, containerCategories, categories, popularMenu, popupOverlay, videoLink, videoIframe} from "./js/DOM";
+import { containerMenu, containerCategories, categories, popularMenu, popupOverlay, videoLink, videoIframe, navItems} from "./js/DOM";
 import { displayMenu } from "./js/displayMenu";
 import { filteredByCategory } from "./js/getCategory";
 import { dispayPopular } from "./js/showPopular";
@@ -10,7 +10,7 @@ import {setMap} from "./js/showMap";
 
 document.addEventListener('DOMContentLoaded', async () => {
    setMap.createMap();
-   checkPath();
+   checkPath(navItems);
    if(!containerMenu) return;
    displayMenu.createCard(menuItems, containerMenu);
 

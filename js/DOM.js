@@ -8,5 +8,5 @@ export const headerContainer = document.getElementById('header-container'),
             videoLink = document.querySelector('.video-link'),
             popupOverlay = document.querySelector('.popup-overlay'),
             videoIframe = document.querySelector('.video-iframe'),
-            navList = document.querySelector('.nav__list'),
+            navItems = document.querySelectorAll('.nav__item'),
             mapContainer = document.getElementById('map');

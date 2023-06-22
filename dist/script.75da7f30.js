@@ -258,7 +258,7 @@ exports.menuItems = menuItems;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.videoLink = exports.videoIframe = exports.popupOverlay = exports.popularMenu = exports.navList = exports.mapContainer = exports.headerContainer = exports.footerContainer = exports.containerMenu = exports.containerCategories = exports.categories = void 0;
+exports.videoLink = exports.videoIframe = exports.popupOverlay = exports.popularMenu = exports.navItems = exports.mapContainer = exports.headerContainer = exports.footerContainer = exports.containerMenu = exports.containerCategories = exports.categories = void 0;
 var headerContainer = document.getElementById('header-container'),
   footerContainer = document.getElementById('footer-container'),
   containerMenu = document.querySelector('.menu__grid'),
@@ -268,10 +268,10 @@ var headerContainer = document.getElementById('header-container'),
   videoLink = document.querySelector('.video-link'),
   popupOverlay = document.querySelector('.popup-overlay'),
   videoIframe = document.querySelector('.video-iframe'),
-  navList = document.querySelector('.nav__list'),
+  navItems = document.querySelectorAll('.nav__item'),
   mapContainer = document.getElementById('map');
 exports.mapContainer = mapContainer;
-exports.navList = navList;
+exports.navItems = navItems;
 exports.videoIframe = videoIframe;
 exports.popupOverlay = popupOverlay;
 exports.videoLink = videoLink;
@@ -425,9 +425,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.checkPath = void 0;
-var checkPath = function checkPath() {
+var checkPath = function checkPath(arrItems) {
   var currentPath = window.location.pathname;
-  return console.log(currentPath);
+  var nameOfPage = currentPath.split('/').pop().replace('.html', '');
+  arrItems.forEach(function (item) {
+    if (item.id === nameOfPage) {
+      item.classList.add('active');
+    }
+  });
 };
 exports.checkPath = checkPath;
 },{}],"node_modules/leaflet/dist/leaflet.js":[function(require,module,exports) {
@@ -557,7 +562,7 @@ document.addEventListener('DOMContentLoaded', /*#__PURE__*/_asyncToGenerator( /*
     while (1) switch (_context.prev = _context.next) {
       case 0:
         _showMap.setMap.createMap();
-        (0, _checkPath.checkPath)();
+        (0, _checkPath.checkPath)(_DOM.navItems);
         if (_DOM.containerMenu) {
           _context.next = 4;
           break;
