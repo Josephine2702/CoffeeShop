@@ -1,4 +1,9 @@
-export const checkPath = function(){
+export const checkPath = function(arrItems){
     let currentPath = window.location.pathname;
-    return console.log(currentPath);
+    let nameOfPage = currentPath.split('/').pop().replace('.html', '');
+    arrItems.forEach(item => {
+        if(item.id === nameOfPage){
+         item.classList.add('active');
+        }
+    });
 }
