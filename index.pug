@@ -132,13 +132,11 @@ main
           | Edit this text to make it your own. To edit, simply click directly on
           | the text to start adding your own words. You can move the text by dragging and dropping the text
         .home-quote__author
-          // <div class="home-quote__person">
           p(data-aos='fade-left' data-aos-duration='5000' data-aos-delay='300')
             | Joheny Andro 
             br
             span.location Bhubaneswar, Odisha
           img(data-aos='fade-right' data-aos-duration='5000' data-aos-delay='500' src='./assets/img/person1.svg' alt='')
-          // </div>
         .border(data-aos='fade-right' data-aos-duration='5000' data-aos-delay='500')
       .home-quote__video
         .home-quote__img-container
@@ -159,7 +157,8 @@ main
           p.text
             | It is a long established fact that a reader will be distracted by the readable
             | content of a page.
-        img.blog__img(src='./assets/img/blog3.jpg' alt='')
+        .image-container 
+          img.blog__img(src='./assets/img/blog3.jpg' alt='')
       .blog__item
         .blog__item-content
           p.text.blog__date 21 Jun 2021
@@ -168,7 +167,8 @@ main
           p.text
             | It is a long established fact that a reader will be distracted by the readable
             | content of a page.
-        img.blog__img(src='./assets/img/blog2.jpg' alt='')
+        .image-container 
+          img.blog__img(src='./assets/img/blog2.jpg' alt='')
       .blog__item
         .blog__item-content
           p.text.blog__date 21 Jun 2021
@@ -177,7 +177,8 @@ main
           p.text
             | It is a long established fact that a reader will be distracted by the readable
             | content of a page.
-        img.blog__img(src='./assets/img/blog1.jpg' alt='')
+        .image-container 
+          img.blog__img(src='./assets/img/blog1.jpg' alt='')
   section.map.container
     include /index/components/map.pug
 include /index/components/footer.pug

@@ -1,5 +1,5 @@
 .home-serving {
-    padding-top: 16rem;
+    padding-top: $padding-top-big;
 
     &__header {
         @include section-header;
@@ -23,6 +23,10 @@
         gap: 12.7rem;
         position: relative;
 
+        @include respond(tab-port) {
+                 gap: 7rem;
+            }
+
         &::after,
         &::before {
             content: "";
@@ -32,10 +36,18 @@
             left: 6.1%;
             width: 70rem;
             transform: rotate(90deg);
+
+            @include respond(tab-port) {
+                 left: 0;
+            }
         }
 
         &::before {
             left: 39%;
+                @include respond(tab-port) {
+                 left: 33%;
+            }
+            
         }
 
         h3 {

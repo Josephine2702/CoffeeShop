@@ -1,7 +1,12 @@
 .menu {
-    padding-top: 16rem;
+    padding-top: $padding-top-big;
     display: flex;
     flex-direction: column;
+
+    @include respond(tab-land) {
+        padding-top:$padding-top-small;
+;
+    }
 
     &__header {
         @include section-header;

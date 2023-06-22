@@ -11,6 +11,16 @@ html {
   background-color: #19161b;
   font-size: 62.5%;
 }
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 .button {
   display: flex;
@@ -119,6 +129,18 @@ a {
   font-size: 5.6rem;
   line-height: 6.8rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .heading-primary {
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-primary {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+}
 
 .heading-secondary {
   font-family: "Playfair Display";
@@ -126,6 +148,18 @@ a {
   color: rgba(255, 255, 255, 0.9);
   font-size: 4.8rem;
   line-height: 5.8rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .heading-secondary {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-secondary {
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+  }
 }
 
 .heading-tertiary {
@@ -135,6 +169,24 @@ a {
   font-weight: 600;
   font-size: 3.2rem;
   line-height: 4.8rem;
+}
+@media only screen and (max-width: 75em) {
+  .heading-tertiary {
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .heading-tertiary {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-tertiary {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
 }
 
 .heading-article {
@@ -430,6 +482,11 @@ a {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 75em) {
+  .menu {
+    padding-top: 9.6rem;
+  }
+}
 .menu__header {
   display: flex;
   justify-content: space-between;
@@ -492,6 +549,11 @@ a {
 .home {
   padding-top: 10rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .home {
+    padding-top: 6rem;
+  }
+}
 .home__block {
   display: flex;
   align-items: center;
@@ -532,8 +594,13 @@ a {
   padding-right: 0.7rem;
 }
 .about__history {
-  margin-top: 16rem;
+  margin-top: 16.5rem;
   background-color: #1f1d21;
+}
+@media only screen and (max-width: 56.25em) {
+  .about__history {
+    margin-top: 9.6rem;
+  }
 }
 .about__background {
   display: flex;
@@ -620,6 +687,11 @@ a {
   gap: 12.7rem;
   position: relative;
 }
+@media only screen and (max-width: 56.25em) {
+  .home-serving__grid {
+    gap: 7rem;
+  }
+}
 .home-serving__grid::after, .home-serving__grid::before {
   content: "";
   border: solid 1px rgba(255, 255, 255, 0.1);
@@ -629,8 +701,18 @@ a {
   width: 70rem;
   transform: rotate(90deg);
 }
+@media only screen and (max-width: 56.25em) {
+  .home-serving__grid::after, .home-serving__grid::before {
+    left: 0;
+  }
+}
 .home-serving__grid::before {
   left: 39%;
+}
+@media only screen and (max-width: 56.25em) {
+  .home-serving__grid::before {
+    left: 33%;
+  }
 }
 .home-serving__grid h3 {
   margin-bottom: 1.3rem;
@@ -643,6 +725,11 @@ a {
   margin-top: 16.5rem;
   background-color: #1f1d21;
 }
+@media only screen and (max-width: 56.25em) {
+  .home-quote {
+    margin-top: 9.6rem;
+  }
+}
 .home-quote__block {
   display: flex;
 }
@@ -653,11 +740,21 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
+@media only screen and (max-width: 75em) {
+  .home-quote__quote {
+    padding: 6rem 4.8rem 6rem 5rem;
+  }
+}
 .home-quote__quote .quote {
   font-weight: 700;
   font-size: 7.2rem;
   line-height: 4.3rem;
   font-style: italic;
+}
+@media only screen and (max-width: 75em) {
+  .home-quote__quote .quote {
+    line-height: 2rem;
+  }
 }
 .home-quote__author {
   padding-top: 6.8rem;
@@ -665,6 +762,11 @@ a {
   justify-content: space-between;
   border-bottom: solid 1px rgba(255, 255, 255, 0.2);
   padding-bottom: 2.2rem;
+}
+@media only screen and (max-width: 75em) {
+  .home-quote__author {
+    padding-top: 4.8rem;
+  }
 }
 .home-quote .border {
   border-bottom: 2px solid #fff;
@@ -701,6 +803,11 @@ a {
 .blog {
   padding-top: 16rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .blog {
+    padding-top: 9.6rem;
+  }
+}
 .blog__block {
   display: flex;
   gap: 3.2rem;
@@ -709,6 +816,7 @@ a {
 .blog__item {
   background-color: #1f1d21;
   max-width: 40rem;
+  width: 100%;
   display: flex;
   flex-direction: column;
   transition: all 0.3s;
@@ -726,7 +834,7 @@ a {
 }
 
 .story {
-  padding-top: 11.2rem;
+  padding-top: 9.6rem;
 }
 .story h2, .story h3 {
   padding-bottom: 2.4rem;
@@ -748,7 +856,7 @@ a {
 }
 
 .blog-page {
-  margin-top: 9.6rem;
+  padding-top: 9.6rem;
 }
 .blog-page h2, .blog-page h3 {
   text-align: center;

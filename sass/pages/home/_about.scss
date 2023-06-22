@@ -21,8 +21,12 @@
     /// about page
 
     &__history {
-        margin-top: 16rem;
+        margin-top: $margin-top-big;
         background-color: $color-primary-light;
+
+        @include respond(tab-port) {
+            margin-top: $margin-top-small;
+        }
     }
 
     &__background {

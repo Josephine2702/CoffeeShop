@@ -1,6 +1,10 @@
 .home {
     padding-top: 10rem;
 
+    @include respond(tab-port) {
+        padding-top: 6rem;
+    }
+
     &__block {
         display: flex;
         align-items: center;
