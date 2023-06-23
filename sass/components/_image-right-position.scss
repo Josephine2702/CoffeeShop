@@ -12,5 +12,9 @@
         &--img2 {
             align-self: start;
         }
+
+        @include respond(phone) {
+            display: none;
+        }
     
 }

@@ -1,6 +1,25 @@
+.nav-mobile
+        input.nav-mobile__checkbox(type='checkbox', id='nav-toggle')
+        label.nav-mobile__button(for='nav-toggle')
+            span.nav-mobile__icon  
+        .nav-mobile__background
+        .nav-mobile__nav
+            .nav-mobile__list
+                .nav-mobile__item
+                    a(href="/index.pug") Home
+                .nav-mobile__item
+                    a(href="/index/pages/menu.pug") Menu 
+                .nav-mobile__item
+                    a(href="/index/pages/about.pug") About us
+                .nav-mobile__item
+                    a(href="/index/pages/story.pug") Our Story
+                .nav-mobile__item
+                    a(href="/index/pages/blog.pug") Blog 
+                .nav-mobile__item
+                    a(href="/index/pages/contact.pug") Contact
 header.header.container
     img.header__logo(src='/assets/icons/Logo.svg', alt="Logo")
-    nav.nav 
+    nav.nav
         ul.nav__list 
             li.nav__item#index
                 a(href="/index.pug") Home
